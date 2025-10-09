@@ -6,14 +6,7 @@ description: "Learn how to automatically call GoHighLevel leads with AI voice ag
 
 This tutorial shows how to set up an automation that automatically calls new leads from GoHighLevel using AI voice agents with intelligent retry logic.
 
-<iframe
-  width="100%"
-  height="400"
-  src="https://www.youtube.com/embed/PHppTRtzWcw?si=9Ic3VHwV-QeL5YER"
-  title="Tutorial: How to call Go High Level leads with AI voice agents automatically"
-  frameBorder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-  allowFullScreen></iframe>
+<video controls className="w-full aspect-video rounded-xl" src="https://www.youtube.com/watch?v=" />
 
 ## What You'll Learn
 
@@ -34,7 +27,7 @@ This tutorial shows how to set up an automation that automatically calls new lea
 First, we need to create an AI assistant that will handle the calls to your GoHighLevel leads.
 
 <Frame>
-  <img src="/resources/tutorials/gohighlevel/01-create-assistant.png" alt="Creating new AI assistant" />
+  ![Creating new AI assistant](/resources/tutorials/gohighlevel/01-create-assistant.png)
 </Frame>
 
 1. **Navigate to Assistants page** and click on "Assistants" in the sidebar
@@ -42,7 +35,7 @@ First, we need to create an AI assistant that will handle the calls to your GoHi
 3. **Give it a name** - for this tutorial, we'll use "Test ghl"
 
 <Frame>
-  <img src="/resources/tutorials/gohighlevel/02-assistant-basic-settings.png" alt="Assistant basic settings configuration" />
+  ![Assistant basic settings configuration](/resources/tutorials/gohighlevel/02-assistant-basic-settings.png)
 </Frame>
 
 4. **Select a phone number** for outbound calls
@@ -54,24 +47,18 @@ First, we need to create an AI assistant that will handle the calls to your GoHi
 Call variables allow you to personalize each call with specific lead information from GoHighLevel.
 
 <Frame>
-  <img src="/resources/tutorials/gohighlevel/03-call-variables-tab.png" alt="Navigating to Prompts and Tools tab" />
+  ![Navigating to Prompts and Tools tab](/resources/tutorials/gohighlevel/03-call-variables-tab.png)
 </Frame>
 
 1. **Go to the second tab** "Prompts and Tools"
 2. **Locate the "Call Variables" section**
 
-<video
-  autoPlay
-  muted
-  loop
-  playsinline
-  src="/resources/tutorials/gohighlevel/04-add-email-variable.mp4"></video>
+<video autoPlay muted loop playsinline src="/resources/tutorials/gohighlevel/04-add-email-variable.mp4" />
 
 3. **Add custom variables** for your GoHighLevel leads:
    - You'll see `customer_name` with default value "John"
-   - **Add `email` variable** with a default value
+   - **`Add email variable`** with a default value
    - Add any additional variables like `company_name`, `address`, etc.
-
 4. **Variables can be used in multiple ways:**
    - **In the system prompt**: "Hi `{customer_name}`"
    - **For mid-call tools**: Personalized API calls
@@ -83,7 +70,7 @@ Call variables allow you to personalize each call with specific lead information
 Post-call variables help track the success of your calls and automate follow-up actions.
 
 <Frame>
-  <img src="/resources/tutorials/gohighlevel/05-post-call-variables.png" alt="Post-call variables configuration" />
+  ![Post-call variables configuration](/resources/tutorials/gohighlevel/05-post-call-variables.png)
 </Frame>
 
 1. **Navigate to step 3** "Post-call Variables"
@@ -92,10 +79,11 @@ Post-call variables help track the success of your calls and automate follow-up 
    - `summary` - Text summary of the call conversation
 
 <Frame>
-  <img src="/resources/tutorials/gohighlevel/06-status-variable-explanation.png" alt="Understanding the status variable" />
+  ![Understanding the status variable](/resources/tutorials/gohighlevel/06-status-variable-explanation.png)
 </Frame>
 
 The `status` variable is crucial for campaign automation:
+
 - **True**: Call objective achieved, lead marked as completed
 - **False**: Call objective not met, lead will be retried
 
@@ -106,51 +94,35 @@ The `status` variable is crucial for campaign automation:
 Now we'll create a campaign that intelligently retries leads until the call objective is achieved.
 
 <Frame>
-  <img src="/resources/tutorials/gohighlevel/07-create-campaign.png" alt="Creating new campaign" />
+  ![Creating new campaign](/resources/tutorials/gohighlevel/07-create-campaign.png)
 </Frame>
 
 1. **Navigate to Campaigns** page in the sidebar
 2. **Click "New Campaign"** button
 
-<video
-  autoPlay
-  muted
-  loop
-  playsinline
-  src="/resources/tutorials/gohighlevel/08-campaign-configuration.mp4"></video>
+<video autoPlay muted loop playsinline src="/resources/tutorials/gohighlevel/08-campaign-configuration.mp4" />
 
 3. **Configure campaign settings:**
    - **Give your campaign a name**
    - **Select the assistant** you just created
-
 5. **Click "Create"** to save your campaign
 
 ## Step 5: Set Up GoHighLevel Integration
 
 Now we'll create the automation that imports leads from GoHighLevel into your campaign.
 
-<video
-  autoPlay
-  muted
-  loop
-  playsinline
-  src="/resources/tutorials/gohighlevel/10-automation-platform.mp4"></video>
+<video autoPlay muted loop playsinline src="/resources/tutorials/gohighlevel/10-automation-platform.mp4" />
 
 1. **Click "Automate platform"** in the sidebar
 2. **Press "New Flow"** and select "From Scratch"
 
-<video
-  autoPlay
-  muted
-  loop
-  playsinline
-  src="/resources/tutorials/gohighlevel/11-search-leadconnector.mp4"></video>
+<video autoPlay muted loop playsinline src="/resources/tutorials/gohighlevel/11-search-leadconnector.mp4" />
 
 3. **Search for "LeadConnector"** in the trigger search bar
 4. **Click on LeadConnector** when it appears
 
 <Frame>
-  <img src="/resources/tutorials/gohighlevel/12-select-new-contact-trigger.png" alt="Selecting new contact trigger" />
+  ![Selecting new contact trigger](/resources/tutorials/gohighlevel/12-select-new-contact-trigger.png)
 </Frame>
 
 5. **Select "New Contact"** trigger
@@ -158,41 +130,25 @@ Now we'll create the automation that imports leads from GoHighLevel into your ca
 
 ## Step 6: Connect Your GoHighLevel Account
 
-<video
-  autoPlay
-  muted
-  loop
-  playsinline
-  src="/resources/tutorials/gohighlevel/13-create-connection.mp4"></video>
+<video autoPlay muted loop playsinline src="/resources/tutorials/gohighlevel/13-create-connection.mp4" />
 
 1. **Click "New Connection"** to link your GoHighLevel account
 2. **Give the connection a name** (e.g., "My GoHighLevel Account")
 
-<video
-  autoPlay
-  muted
-  loop
-  playsinline
-  src="/resources/tutorials/gohighlevel/14-oauth-authorization.mp4"></video>
+<video autoPlay muted loop playsinline src="/resources/tutorials/gohighlevel/14-oauth-authorization.mp4" />
 
 3. **Click "Connect"** to start OAuth authorization
 4. **Authorize the connection** in the popup window:
    - Scroll down and click "Next"
    - Select your desired GoHighLevel account
    - Complete the authorization process
-
 5. **Click "Save"** to finalize the connection
 
 ## Step 7: Test the Trigger with Sample Data
 
 Before we can configure the automation, we need sample lead data to work with.
 
-<video
-  autoPlay
-  muted
-  loop
-  playsinline
-  src="/resources/tutorials/gohighlevel/15-create-test-contact.mp4"></video>
+<video autoPlay muted loop playsinline src="/resources/tutorials/gohighlevel/15-create-test-contact.mp4" />
 
 1. **Go to your GoHighLevel account**
 2. **Navigate to Contacts** page
@@ -203,12 +159,7 @@ Before we can configure the automation, we need sample lead data to work with.
    - Phone number
 5. **Click "Save"** to create the contact
 
-<video
-  autoPlay
-  muted
-  loop
-  playsinline
-  src="/resources/tutorials/gohighlevel/16-load-data-button.mp4"></video>
+<video autoPlay muted loop playsinline src="/resources/tutorials/gohighlevel/16-load-data-button.mp4" />
 
 6. **Return to the automation platform**
 7. **Click "Load Data"** to fetch the test contact
@@ -218,12 +169,7 @@ Before we can configure the automation, we need sample lead data to work with.
 
 Now we'll set up the action that adds leads to your calling campaign.
 
-<video
-  autoPlay
-  muted
-  loop
-  playsinline
-  src="/resources/tutorials/gohighlevel/17-add-action-step.mp4"></video>
+<video autoPlay muted loop playsinline src="/resources/tutorials/gohighlevel/17-add-action-step.mp4" />
 
 1. **Click the "+" sign** to add an action step
 2. **Search for your calling platform**
@@ -235,48 +181,38 @@ Now we'll set up the action that adds leads to your calling campaign.
 This is where we connect GoHighLevel lead data to your assistant's call variables.
 
 <Frame>
-  <img src="/resources/tutorials/gohighlevel/19-map-phone-number.png" alt="Mapping phone number from trigger data" />
+  ![Mapping phone number from trigger data](/resources/tutorials/gohighlevel/19-map-phone-number.png)
 </Frame>
 
 1. **Click on the "Phone Number" input field**
 2. **Select the phone number** from the trigger data sidebar
 3. **Click "Insert"** to map the field
 
-<video
-  autoPlay
-  muted
-  loop
-  playsinline
-  src="/resources/tutorials/gohighlevel/20-map-variables.mp4"></video>
+<video autoPlay muted loop playsinline src="/resources/tutorials/gohighlevel/20-map-variables.mp4" />
 
 4. **Map the call variables** you defined in your assistant:
-   - **customer_name**: Use both "first_name" and "last_name" 
+   - **customer_name**: Use both "first_name" and "last_name"
    - **email**: Map to the email field from GoHighLevel
 
 <Frame>
-  <img src="/resources/tutorials/gohighlevel/21-variable-mapping-complete.png" alt="Completed variable mapping" />
+  ![Completed variable mapping](/resources/tutorials/gohighlevel/21-variable-mapping-complete.png)
 </Frame>
 
 5. **Add additional variables** using "Add Item" if you have more custom fields
 
 <Tip>
-Always define variables in your assistant first, then map them in the automation. This ensures proper data flow from GoHighLevel to your calls. Learn more about [configuring call variables](/ai-assistants/settings/prompt-and-tools#call-variables).
+  Always define variables in your assistant first, then map them in the automation. This ensures proper data flow from GoHighLevel to your calls. Learn more about [configuring call variables](/ai-assistants/settings/prompt-and-tools#call-variables).
 </Tip>
 
 ## Step 10: Test and Deploy
 
-<video
-  autoPlay
-  muted
-  loop
-  playsinline
-  src="/resources/tutorials/gohighlevel/22-test-step.mp4"></video>
+<video autoPlay muted loop playsinline src="/resources/tutorials/gohighlevel/22-test-step.mp4" />
 
 1. **Click "Test Step"** to verify the lead is added correctly
 2. **Check the confirmation** that the customer was added
 
 <Frame>
-  <img src="/resources/tutorials/gohighlevel/23-verify-lead-added.png" alt="Verifying lead in platform" />
+  ![Verifying lead in platform](/resources/tutorials/gohighlevel/23-verify-lead-added.png)
 </Frame>
 
 3. **Navigate to the Leads page** to verify:
@@ -285,7 +221,7 @@ Always define variables in your assistant first, then map them in the automation
    - Data matches your GoHighLevel contact
 
 <Frame>
-  <img src="/resources/tutorials/gohighlevel/24-publish-automation.png" alt="Publishing the automation" />
+  ![Publishing the automation](/resources/tutorials/gohighlevel/24-publish-automation.png)
 </Frame>
 
 4. **Return to automation and click "Publish"**
@@ -301,16 +237,19 @@ Always define variables in your assistant first, then map them in the automation
 ## Best Practices
 
 ### Variable Management
+
 - **Define all necessary variables** in your assistant before creating automations
 - **Use descriptive variable names** that match your GoHighLevel fields
 - **Test with sample data** before going live
 
 ### Campaign Configuration
+
 - **Start with 3 retries maximum** to avoid overwhelming leads
 - **Use 60-minute intervals** to allow reasonable callback timing
-- **Monitor the `status` variable** to track conversion rates
+- **`Monitor the status variable`** to track conversion rates
 
 ### Lead Quality
+
 - **Ensure phone numbers are in international format** (+1234567890)
 - **Verify email addresses** for follow-up automations
 - **Keep lead data up to date** in GoHighLevel
@@ -320,16 +259,19 @@ Always define variables in your assistant first, then map them in the automation
 ### Common Issues
 
 **Leads not being imported:**
+
 - Check GoHighLevel connection authorization
 - Verify webhook is properly configured
 - Ensure new contacts have valid phone numbers
 
 **Variables not populating:**
+
 - Confirm variable names match between assistant and automation
 - Check that GoHighLevel fields contain data
 - Verify mapping in the automation step
 
 **Calls not triggering:**
+
 - Ensure campaign is started
 - Check phone number configuration
 - Verify assistant is properly configured
@@ -337,6 +279,7 @@ Always define variables in your assistant first, then map them in the automation
 ## Next Steps
 
 Once your basic automation is working:
+
 - **Set up SMS follow-ups** for unsuccessful calls
 - **Create Google Sheets integration** to track qualified leads
 - **Add email automation** for additional touchpoints

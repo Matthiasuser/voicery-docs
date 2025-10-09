@@ -6,14 +6,7 @@ description: "Learn how to sync leads from a live Google Sheet and trigger AI ca
 
 This tutorial shows how to set up an automation that monitors a Google Sheet for new leads and automatically triggers AI calls when new rows are added.
 
-<iframe
-  width="100%"
-  height="400"
-  src="https://www.youtube.com/embed/FoqCXx6ehII?si=9Ic3VHwV-QeL5YER"
-  title="Tutorial: How to sync leads from a live Google Sheet"
-  frameBorder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-  allowFullScreen></iframe>
+<video controls className="w-full aspect-video rounded-xl" src="https://www.youtube.com/watch?v=" />
 
 ## What You'll Learn
 
@@ -34,19 +27,14 @@ This tutorial shows how to set up an automation that monitors a Google Sheet for
 We'll start by creating an AI assistant specifically configured for Google Sheets lead processing.
 
 <Frame>
-  <img src="/resources/tutorials/google-sheets-sync/01-create-assistant.png" alt="Creating new AI assistant for Google Sheets" />
+  ![Creating new AI assistant for Google Sheets](/resources/tutorials/google-sheets-sync/01-create-assistant.png)
 </Frame>
 
 1. **Navigate to Assistants page** and click "Assistants" in the sidebar
 2. **Click "New Assistant"** button
 3. **Name your assistant** - we'll use "Test GoogleSheets"
 
-<video
-  autoPlay
-  muted
-  loop
-  playsinline
-  src="/resources/tutorials/google-sheets-sync/02-assistant-configuration.mp4"></video>
+<video autoPlay muted loop playsinline src="/resources/tutorials/google-sheets-sync/02-assistant-configuration.mp4" />
 
 4. **Complete the basic settings:**
    - Select a phone number for outbound calls
@@ -58,24 +46,18 @@ We'll start by creating an AI assistant specifically configured for Google Sheet
 Call variables will map directly to columns in your Google Sheet, so plan your spreadsheet structure accordingly.
 
 <Frame>
-  <img src="/resources/tutorials/google-sheets-sync/03-prompts-and-tools-tab.png" alt="Navigating to Prompts and Tools tab" />
+  ![Navigating to Prompts and Tools tab](/resources/tutorials/google-sheets-sync/03-prompts-and-tools-tab.png)
 </Frame>
 
 1. **Go to the "Prompts and Tools" tab** (second tab)
 2. **Locate the "Call Variables" section**
 
-<video
-  autoPlay
-  muted
-  loop
-  playsinline
-  src="/resources/tutorials/google-sheets-sync/04-add-email-variable.mp4"></video>
+<video autoPlay muted loop playsinline src="/resources/tutorials/google-sheets-sync/04-add-email-variable.mp4" />
 
 3. **Configure your call variables:**
    - You'll see `customer_name` with default value "John"
-   - **Add `email` variable** with your email as default value for testing
+   - **`Add email variable`** with your email as default value for testing
    - Add any additional variables that match your spreadsheet columns
-
 4. **Variables can be used in multiple ways:**
    - **In the system prompt**: "Hi `{customer_name}`"
    - **For mid-call tools**: Personalized API calls
@@ -85,56 +67,35 @@ Call variables will map directly to columns in your Google Sheet, so plan your s
 ## Step 3: Create Campaign for Sheet Leads
 
 <Frame>
-  <img src="/resources/tutorials/google-sheets-sync/06-create-campaign.png" alt="Creating campaign for Google Sheets leads" />
+  ![Creating campaign for Google Sheets leads](/resources/tutorials/google-sheets-sync/06-create-campaign.png)
 </Frame>
 
 1. **Navigate to Campaigns** page in the sidebar
 2. **Click "New Campaign"** button
 
-<video
-  autoPlay
-  muted
-  loop
-  playsinline
-  src="/resources/tutorials/google-sheets-sync/07-campaign-settings.mp4"></video>
+<video autoPlay muted loop playsinline src="/resources/tutorials/google-sheets-sync/07-campaign-settings.mp4" />
 
 3. **Configure your campaign:**
    - **Give it a descriptive name**
    - **Select the assistant** you just created
    - **Keep default retry settings** (can be adjusted later)
-
 4. **Click "Create"** to save the campaign
 
 ## Step 4: Set Up Google Sheets Automation
 
 Now we'll create the automation that monitors your Google Sheet for new leads.
 
-<video
-  autoPlay
-  muted
-  loop
-  playsinline
-  src="/resources/tutorials/google-sheets-sync/08-automation-platform.mp4"></video>
+<video autoPlay muted loop playsinline src="/resources/tutorials/google-sheets-sync/08-automation-platform.mp4" />
 
 1. **Click "Automation Platform"** in the sidebar
 2. **Create a new flow** from scratch
 
-<video
-  autoPlay
-  muted
-  loop
-  playsinline
-  src="/resources/tutorials/google-sheets-sync/09-search-google-sheets.mp4"></video>
+<video autoPlay muted loop playsinline src="/resources/tutorials/google-sheets-sync/09-search-google-sheets.mp4" />
 
 3. **Search for "Google Sheets"** in the trigger search
 4. **Select "New Row Added"** trigger
 
-<video
-  autoPlay
-  muted
-  loop
-  playsinline
-  src="/resources/tutorials/google-sheets-sync/10-create-connection.mp4"></video>
+<video autoPlay muted loop playsinline src="/resources/tutorials/google-sheets-sync/10-create-connection.mp4" />
 
 5. **Create a new connection:**
    - Click "New Connection"
@@ -145,12 +106,7 @@ Now we'll create the automation that monitors your Google Sheet for new leads.
 
 For this tutorial, we'll create a properly formatted test spreadsheet.
 
-<video
-  autoPlay
-  muted
-  loop
-  playsinline
-  src="/resources/tutorials/google-sheets-sync/11-create-new-sheet.mp4"></video>
+<video autoPlay muted loop playsinline src="/resources/tutorials/google-sheets-sync/11-create-new-sheet.mp4" />
 
 1. **Go to Google Sheets** and create a new spreadsheet
 2. **Name it "testnewleads"** (or any descriptive name)
@@ -160,53 +116,33 @@ For this tutorial, we'll create a properly formatted test spreadsheet.
    - **Email**: Your email address
 
 <Warning>
-**Phone Number Format**: Always use international format with + sign and no spaces or parentheses. Example: +1234567890, not (123) 456-7890
+  **Phone Number Format**: Always use international format with + sign and no spaces or parentheses. Example: +1234567890, not (123) 456-7890
 </Warning>
 
 2. **Save the spreadsheet** - this data will be used for testing
 
 ## Step 7: Configure the Automation Trigger
 
-<video
-  autoPlay
-  muted
-  loop
-  playsinline
-  src="/resources/tutorials/google-sheets-sync/14-select-spreadsheet.mp4"></video>
+<video autoPlay muted loop playsinline src="/resources/tutorials/google-sheets-sync/14-select-spreadsheet.mp4" />
 
 1. **Return to the automation platform**
 2. **Select your spreadsheet** ("testnewleads")
 3. **Select the specific sheet** (usually "Sheet1")
 
-<video
-  autoPlay
-  muted
-  loop
-  playsinline
-  src="/resources/tutorials/google-sheets-sync/15-load-data.mp4"></video>
+<video autoPlay muted loop playsinline src="/resources/tutorials/google-sheets-sync/15-load-data.mp4" />
 
 4. **Click "Load Data"** to fetch the sample lead
 5. **Verify** that you can see the lead data you just created
 
 ## Step 8: Configure the Campaign Action
 
-<video
-  autoPlay
-  muted
-  loop
-  playsinline
-  src="/resources/tutorials/google-sheets-sync/16-add-action.mp4"></video>
+<video autoPlay muted loop playsinline src="/resources/tutorials/google-sheets-sync/16-add-action.mp4" />
 
 1. **Click the "+" sign** to add an action
 2. **Search for your calling platform**
 3. **Select "Add Lead to Campaign"**
 
-<video
-  autoPlay
-  muted
-  loop
-  playsinline
-  src="/resources/tutorials/google-sheets-sync/17-select-campaign.mp4"></video>
+<video autoPlay muted loop playsinline src="/resources/tutorials/google-sheets-sync/17-select-campaign.mp4" />
 
 4. **Select the campaign** you created for this automation
 
@@ -214,24 +150,14 @@ For this tutorial, we'll create a properly formatted test spreadsheet.
 
 This step connects your spreadsheet columns to your assistant's call variables.
 
-<video
-  autoPlay
-  muted
-  loop
-  playsinline
-  src="/resources/tutorials/google-sheets-sync/18-map-phone-number.mp4"></video>
+<video autoPlay muted loop playsinline src="/resources/tutorials/google-sheets-sync/18-map-phone-number.mp4" />
 
 1. **Click on the "Phone Number" input field**
 2. **A sidebar will open** showing available data from the trigger
 3. **Search for and select the phone number** from your spreadsheet
 4. **Click "Insert"** to map the field
 
-<video
-  autoPlay
-  muted
-  loop
-  playsinline
-  src="/resources/tutorials/google-sheets-sync/19-map-variables.mp4"></video>
+<video autoPlay muted loop playsinline src="/resources/tutorials/google-sheets-sync/19-map-variables.mp4" />
 
 5. **Map your call variables:**
    - **customer_name**: Select from spreadsheet data
@@ -239,17 +165,12 @@ This step connects your spreadsheet columns to your assistant's call variables.
    - Map any additional variables you defined
 
 <Tip>
-The variable names in your assistant must match the data you're mapping. If you have more columns in your spreadsheet, make sure to define corresponding variables in your assistant first. Learn more about [configuring call variables](/ai-assistants/settings/prompt-and-tools#call-variables).
+  The variable names in your assistant must match the data you're mapping. If you have more columns in your spreadsheet, make sure to define corresponding variables in your assistant first. Learn more about [configuring call variables](/ai-assistants/settings/prompt-and-tools#call-variables).
 </Tip>
 
 ## Step 10: Test the Integration
 
-<video
-  autoPlay
-  muted
-  loop
-  playsinline
-  src="/resources/tutorials/google-sheets-sync/20-test-step.mp4"></video>
+<video autoPlay muted loop playsinline src="/resources/tutorials/google-sheets-sync/20-test-step.mp4" />
 
 1. **Click "Test Step"** to verify the lead creation
 2. **Check for success confirmation**
@@ -261,7 +182,7 @@ The variable names in your assistant must match the data you're mapping. If you 
 ## Step 11: Publish and Monitor
 
 <Frame>
-  <img src="/resources/tutorials/google-sheets-sync/22-publish-automation.png" alt="Publishing the automation" />
+  ![Publishing the automation](/resources/tutorials/google-sheets-sync/22-publish-automation.png)
 </Frame>
 
 1. **Click "Publish"** to activate your automation
@@ -278,6 +199,7 @@ The variable names in your assistant must match the data you're mapping. If you 
 ## Best Practices
 
 ### Spreadsheet Management
+
 - **Maintain consistent data format** across all entries
 - **Keep phone numbers in international format** consistently
 - **Avoid empty rows** between data entries
@@ -285,6 +207,7 @@ The variable names in your assistant must match the data you're mapping. If you 
 ## Advanced Features
 
 ### Multiple Variable Support
+
 If your business needs more lead data:
 
 1. **Add columns** to your spreadsheet (company_name, address, etc.)
@@ -297,21 +220,25 @@ If your business needs more lead data:
 ### Common Issues
 
 **Leads not syncing:**
+
 - Check Google Sheets connection authorization
 - Verify spreadsheet permissions and sharing settings
 - Ensure new rows contain data in all mapped columns
 
 **Phone number format errors:**
+
 - Use international format: +1234567890
 - Remove spaces, parentheses, and dashes
 - Verify country code is included
 
 **Variable mapping issues:**
+
 - Confirm variable names match between assistant and spreadsheet
 - Check that columns contain data
 - Verify mapping configuration in automation
 
 **Automation not triggering:**
+
 - Ensure automation is published and active
 - Check that new rows are actually being added
 - Verify Google Sheets trigger is properly configured
@@ -319,6 +246,7 @@ If your business needs more lead data:
 ## Next Steps
 
 Once your Google Sheets integration is working:
+
 - **Scale up** with larger lead lists
 - **Add more variables** for better personalization
 - **Integrate with other tools** like CRM systems
