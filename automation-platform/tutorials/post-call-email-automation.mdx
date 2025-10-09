@@ -3,16 +3,10 @@ title: "Post-Call Email Automation"
 icon: "envelope"
 description: "Learn how to automatically send personalized emails to customers after AI phone calls"
 ---
+
 This tutorial shows how to set up an automation that sends personalized follow-up emails to customers after AI phone calls, with conditional logic based on call outcomes and personalized content.
 
-<iframe
-  width="100%"
-  height="400"
-  src="https://www.youtube.com/embed/f0b7cMXqWWI?si=9Ic3VHwV-QeL5YER"
-  title="Tutorial: How to send an email after phone call ends"
-  frameBorder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-  allowFullScreen></iframe>
+<video controls className="w-full aspect-video rounded-xl" src="https://www.youtube.com/watch?v=" />
 
 ## What You'll Learn
 
@@ -33,12 +27,7 @@ This tutorial shows how to set up an automation that sends personalized follow-u
 
 We'll create an automation that triggers after phone calls and sends personalized emails based on call outcomes.
 
-<video
-  autoPlay
-  muted
-  loop
-  playsinline
-  src="/resources/tutorials/post-call-email/01-create-email-automation.mp4"></video>
+<video autoPlay muted loop playsinline src="/resources/tutorials/post-call-email/01-create-email-automation.mp4" />
 
 1. **Navigate to Automation Platform**
 2. **Create a new flow** from scratch
@@ -48,12 +37,7 @@ We'll create an automation that triggers after phone calls and sends personalize
 
 ## Step 2: Configure Assistant and Webhook Integration
 
-<video
-  autoPlay
-  muted
-  loop
-  playsinline
-  src="/resources/tutorials/post-call-email/03-select-assistant-for-email.mp4"></video>
+<video autoPlay muted loop playsinline src="/resources/tutorials/post-call-email/03-select-assistant-for-email.mp4" />
 
 1. **Select your target assistant**
    - Each assistant supports only one post-call automation
@@ -64,19 +48,14 @@ We'll create an automation that triggers after phone calls and sends personalize
 
 ## Step 3: Verify Assistant Configuration
 
-<video
-  autoPlay
-  muted
-  loop
-  playsinline
-  src="/resources/tutorials/post-call-email/05-check-assistant-webhook.mp4"></video>
+<video autoPlay muted loop playsinline src="/resources/tutorials/post-call-email/05-check-assistant-webhook.mp4" />
 
 1. **Open your assistant** in a new tab
 2. **Navigate to "Post-call Actions"** (third tab)
 3. **Confirm webhook URL** was automatically configured
 
 <Frame>
-  <img src="/resources/tutorials/post-call-email/06-webhook-settings.png" alt="Webhook trigger configuration" />
+  ![Webhook trigger configuration](/resources/tutorials/post-call-email/06-webhook-settings.png)
 </Frame>
 
 4. **Review trigger settings:**
@@ -85,7 +64,7 @@ We'll create an automation that triggers after phone calls and sends personalize
    - **All calls**: Select "No" to include failed calls
 
 <Frame>
-  <img src="/resources/tutorials/post-call-email/07-post-call-variables.png" alt="Post-call variables for email content" />
+  ![Post-call variables for email content](/resources/tutorials/post-call-email/07-post-call-variables.png)
 </Frame>
 
 5. **Verify post-call variables:**
@@ -97,7 +76,7 @@ We'll create an automation that triggers after phone calls and sends personalize
 For email automation to work, your assistant must collect customer email addresses.
 
 <Frame>
-  <img src="/resources/tutorials/post-call-email/08-set-test-values.png" alt="Call variables including email collection" />
+  ![Call variables including email collection](/resources/tutorials/post-call-email/08-set-test-values.png)
 </Frame>
 
 1. **Check your assistant's call variables:**
@@ -107,12 +86,7 @@ For email automation to work, your assistant must collect customer email address
 
 ## Step 5: Generate Test Call with Email Data
 
-<video
-  autoPlay
-  muted
-  loop
-  playsinline
-  src="/resources/tutorials/post-call-email/09-make-test-call.mp4"></video>
+<video autoPlay muted loop playsinline src="/resources/tutorials/post-call-email/09-make-test-call.mp4" />
 
 1. **Make a test call to generate webhook data:**
    - Click **"Speak to Assistant"** → **"Phone Call"**
@@ -122,20 +96,15 @@ For email automation to work, your assistant must collect customer email address
    - **End the call naturally**
 
 <Note>
-In a real situation, the assistant will take data assigned to the lead. For testing, it uses the default values you just set.
+  In a real situation, the assistant will take data assigned to the lead. For testing, it uses the default values you just set.
 </Note>
 
-<video
-  autoPlay
-  muted
-  loop
-  playsinline
-  src="/resources/tutorials/post-call-email/10-check-call-results.mp4"></video>
+<video autoPlay muted loop playsinline src="/resources/tutorials/post-call-email/10-check-call-results.mp4" />
 
 2. **Verify call results and variable extraction:**
    - **Navigate to your calls list** and find the recent call
    - **Click on the call** to view details
-   - **Confirm the `status` variable is `true`** (call objective achieved)
+   - **``Confirm the status variable is true``** (call objective achieved)
    - These variables are extracted after each call based on:
      - Call transcript
      - Variable descriptions
@@ -143,128 +112,83 @@ In a real situation, the assistant will take data assigned to the lead. For test
      - System prompt context
 
 <Note>
-The variables after a call are being extracted. You can refresh the page after about a minute and then you will see the extracted variables.
+  The variables after a call are being extracted. You can refresh the page after about a minute and then you will see the extracted variables.
 </Note>
 
-<video
-  autoPlay
-  muted
-  loop
-  playsinline
-  src="/resources/tutorials/post-call-email/11-received-call-data.mp4"></video>
+<video autoPlay muted loop playsinline src="/resources/tutorials/post-call-email/11-received-call-data.mp4" />
 
 1. **Return to your automation tab**
 2. **Verify you received call data** from the test trigger
    - You should see the webhook data because you clicked "Test Trigger" and then made a call
    - The automation received the request after the call ended and variables were extracted
-
 3. **Alternative method - resend webhook data from existing calls:**
 
-<video
-  autoPlay
-  muted
-  loop
-  playsinline
-  src="/resources/tutorials/post-call-email/12-resend-webhook.mp4"></video>
+<video autoPlay muted loop playsinline src="/resources/tutorials/post-call-email/12-resend-webhook.mp4" />
 
-   - If you need to test with different call data, you can reuse any existing call
-   - **Click "Test Trigger"** again in your automation
-   - **Go to any completed call** in your platform  
-   - **Click "Resend Webhook"** to push that call's data to your automation
-   - **Return to automation tab** to see the updated data
+- If you need to test with different call data, you can reuse any existing call
+- **Click "Test Trigger"** again in your automation
+- **Go to any completed call** in your platform
+- **Click "Resend Webhook"** to push that call's data to your automation
+- **Return to automation tab** to see the updated data
 
 ### Adding New Post-Call Variables
 
 <Note>
-If you need to add a new post-call variable after creating the automation, follow this process to update your automation with the new variable data.
+  If you need to add a new post-call variable after creating the automation, follow this process to update your automation with the new variable data.
 </Note>
 
-<video
-  autoPlay
-  muted
-  loop
-  playsinline
-  src="/resources/tutorials/post-call-email/add-variable.mp4"></video>
+<video autoPlay muted loop playsinline src="/resources/tutorials/post-call-email/add-variable.mp4" />
 
 1. **Define the new variable in your assistant:**
    - Go to assistant settings → "Post-call Actions" tab
    - Add your new post-call variable (name, type, description)
    - **Save the assistant**
-
 2. **Update automation with new variable data:**
    - **Return to your automation**
    - **Click "Test Trigger"** to prepare for new webhook data
-
-
 3. **Re-evaluate an existing call:**
 
-<video
-  autoPlay
-  muted
-  loop
-  playsinline
-  src="/resources/tutorials/post-call-email/re-evaluate.mp4"></video>
+<video autoPlay muted loop playsinline src="/resources/tutorials/post-call-email/re-evaluate.mp4" />
 
-   - **Go to any completed call** for this assistant
-   - **Click "Re-evaluate"** to extract the new variable from that call
-   - **Wait for processing** to complete
+- **Go to any completed call** for this assistant
+- **Click "Re-evaluate"** to extract the new variable from that call
+- **Wait for processing** to complete
 
 4. **Send updated data to automation:**
    - **Click "Resend Webhook"** on the same call
-   - **Return to automation tab** 
+   - **Return to automation tab**
    - **Verify the new variable** is now available in your automation data
 
 <Tip>
-This resend feature is useful for testing different scenarios without making new calls every time.
+  This resend feature is useful for testing different scenarios without making new calls every time.
 </Tip>
 
 ## Step 6: Configure Conditional Email Logic
 
-
 We only want to add leads to Google Sheets when the call objective was achieved.
 
-<video
-  autoPlay
-  muted
-  loop
-  playsinline
-  src="/resources/tutorials/post-call-email/13-add-branch.mp4"></video>
+<video autoPlay muted loop playsinline src="/resources/tutorials/post-call-email/13-add-branch.mp4" />
 
 1. **Click the "+" sign** to add a step
 2. **Search for "Branch"** in control flow
 3. **Select Branch** to create conditional logic
 
-<video
-  autoPlay
-  muted
-  loop
-  playsinline
-  src="/resources/tutorials/post-call-email/14-configure-status-condition.mp4"></video>
+<video autoPlay muted loop playsinline src="/resources/tutorials/post-call-email/14-configure-status-condition.mp4" />
 
 4. **Configure the branch condition:**
-   - **Select `status` variable** from call data
+   - **`Select status variable`** from call data
    - **Choose "Boolean is true"**
    - This creates two paths: True (qualified) and False (not qualified)
 
 ## Step 7: Set Up Email Service Integration
 
-<video
-  autoPlay
-  muted
-  loop
-  playsinline
-  src="/resources/tutorials/post-call-email/15-add-email-action.mp4"></video>
+<video autoPlay muted loop playsinline src="/resources/tutorials/post-call-email/15-add-email-action.mp4" />
 
 1. **On the True branch**, click "+"
 2. **Search for your email service** (Gmail, Outlook, SMTP, etc.)
 3. **Select "Send Email"** action
 
-<video
-  autoPlay
-  muted
-  loop
-  playsinline
-  src="/resources/tutorials/post-call-email/16-create-email-connection.mp4"></video>
+<video autoPlay muted loop playsinline src="/resources/tutorials/post-call-email/16-create-email-connection.mp4" />
 
 4. **Create email service connection:**
    - Authorize with your email provider
@@ -273,29 +197,18 @@ We only want to add leads to Google Sheets when the call objective was achieved.
 
 ## Step 8: Configure Email Content and Recipients
 
-<video
-  autoPlay
-  muted
-  loop
-  playsinline
-  src="/resources/tutorials/post-call-email/17-map-recipient-email.mp4"></video>
+<video autoPlay muted loop playsinline src="/resources/tutorials/post-call-email/17-map-recipient-email.mp4" />
 
 1. **Configure recipient:**
    - Click on "To" email field
    - **Select customer email** from call variables
    - Ensure the email address is properly mapped
-
 2. **Set email subject:**
    - Use dynamic content: "Thank you for your time, `{customer_name}`!"
    - Include company name or call reference
    - Keep subject professional and relevant
 
-<video
-  autoPlay
-  muted
-  loop
-  playsinline
-  src="/resources/tutorials/post-call-email/19-compose-email-body.mp4"></video>
+<video autoPlay muted loop playsinline src="/resources/tutorials/post-call-email/19-compose-email-body.mp4" />
 
 1. **Compose email body with dynamic content:**
    - **Click on the "Body" field** to start writing your email
@@ -318,13 +231,14 @@ Best regards,
 [Your Name/Company]
 [Contact Information]
 ```
+
 2. **Add dynamic variables to your email:**
-   - **To replace `{customer_name}`**: 
+   - **`To replace {customer_name}`**:
      - **Click where you want the variable** in your email text
      - **A popup will appear** with available variables
      - **Search for and select "customer_name"** from call variables
      - **Click "Insert"** to add the variable
-   - **To replace `{formatted_transcript}`**:
+   - **`To replace {formatted_transcript}`**:
      - **Click where you want the transcript** in your email text
      - **Navigate to "Post Call Variables"** in the popup
      - **Select the "formatted_transcript" variable**
@@ -340,12 +254,7 @@ You can create more professional emails by using HTML formatting:
 
 ## Step 11: Test Email Automation
 
-<video
-  autoPlay
-  muted
-  loop
-  playsinline
-  src="/resources/tutorials/post-call-email/22-test-email-sending.mp4"></video>
+<video autoPlay muted loop playsinline src="/resources/tutorials/post-call-email/22-test-email-sending.mp4" />
 
 1. **Click "Test Step"** to send test email
 2. **Verify successful delivery** in test results
@@ -357,7 +266,7 @@ You can create more professional emails by using HTML formatting:
 ## Step 12: Publish and Monitor
 
 <Frame>
-  <img src="/resources/tutorials/post-call-email/25-publish-email-automation.png" alt="Publishing email automation" />
+  ![Publishing email automation](/resources/tutorials/post-call-email/25-publish-email-automation.png)
 </Frame>
 
 1. **Click "Publish"** to activate your email automation
@@ -366,6 +275,7 @@ You can create more professional emails by using HTML formatting:
 ## Best Practices
 
 ### Email Content
+
 - **Professional tone** appropriate for your industry
 - **Clear subject lines** that indicate purpose
 - **Personalized content** using call data effectively
@@ -376,16 +286,17 @@ You can create more professional emails by using HTML formatting:
 ### Common Issues
 
 **Emails not sending:**
+
 - Verify email service connection and authorization
 - Check that customer email addresses are valid
 - Confirm email action is on correct conditional branch
 - Verify automation is published and active
 
 **Dynamic content not populating:**
+
 - Check variable mapping in email template
 - Verify post-call variables are being extracted correctly
 - Ensure call variables contain email data
 - Test with various call scenarios
-
 
 Your customers will now receive professional, personalized follow-up emails after every successful call, improving relationship building and conversion rates!
