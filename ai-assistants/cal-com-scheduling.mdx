@@ -7,9 +7,7 @@ description: "Learn how to enable your AI assistant to schedule appointments usi
 Enable your AI assistant to seamlessly schedule meetings and appointments using Cal.com integration. This powerful feature allows your AI to check availability and book meetings directly during calls.
 
 <Warning>
-  Do not make any new fields required in your Cal.com event settings. The
-  integration only supports default fields and the optional phone field. Adding
-  required custom fields will cause the integration to fail.
+  Do not make any new fields required in your Cal.com event settings. The integration only supports default fields and the optional phone field. Adding required custom fields will cause the integration to fail.
 </Warning>
 
 ## Prerequisites
@@ -29,7 +27,11 @@ Before setting up Cal.com integration, you'll need:
    - Give it a clear name like "Meeting with AI Assistant"
    - Configure duration, availability, and other settings
 3. Once created, note down the event ID from the URL
-   <img height="200" src="/resources/cal-event-id.png" />
+
+   <img
+     height="200"
+     src="/resources/cal-event-id.png"
+   />
 4. Generate an API key:
    - Go to Cal.com settings
    - Navigate to Developer Settings
@@ -52,12 +54,26 @@ To include the caller's phone number in calendar events:
 
 1. Go to your event settings in Cal.com
 2. Click on "Add a question"
-   <img height="200" src="/resources/cal-event-settings.jpeg" />
+
+   <img
+     height="200"
+     src="/resources/cal-event-settings.jpeg"
+   />
 3. Configure the field with these exact values:
    - Identifier: `phone` (this must be exact)
-     <img height="200" src="/resources/cal-phone-field.jpeg" />
+
+     <img
+       height="200"
+       src="/cal-phone-field.jpeg"
+       alt=""
+       title=""
+     />
 4. Save your changes
-   <img height="200" src="/resources/cal-save.jpeg" />
+
+   <img
+     height="200"
+     src="/resources/cal-save.jpeg"
+   />
 
 ### 3. Adding Cal.com to Your Assistant
 
@@ -66,7 +82,11 @@ To include the caller's phone number in calendar events:
 3. Configure the tool with:
    - Your Cal.com API key
    - The event type ID
-     <img height="200" src="/resources/cal-tool.png" />
+
+     <img
+       height="200"
+       src="/resources/cal-tool.png"
+     />
 
 ## Best Practices
 
@@ -93,20 +113,23 @@ After setup, we recommend:
 ### Quick Fixes:
 
 **Missing API Key Error:**
+
 - **Solution:** Enter correct API key and event ID in assistant settings
 - **Steps:** Go to [assistant settings](/ai-assistants/settings/prompt-and-tools#default-tools) → Appointment Scheduling → Enter API key and event ID → Save
 
 **Booking Failures:**
+
 - **Email Required:** Ensure assistant has email defined in [assistant settings](/ai-assistants/settings/prompt-and-tools#call-variables)
 - **Phone field setup:** Add phone field in Cal.com event settings with identifier "phone". See [Phone Number in Calendar Events](#phone-number-in-calendar-events) for detailed setup.
 - **Test with real phone calls:** Use phone call (not web call) for testing
 - **No custom fields:** Don't add required custom fields in Cal.com event settings
 
 **Connection Issues:**
+
 - **Verify API key** is active in Cal.com developer settings
 - **Check event ID** from your Cal.com event URL
 - **Confirm phone field** identifier is exactly "phone"
 
 <Note>
-For comprehensive Cal.com troubleshooting, including detailed solutions and additional issues, see [Cal.com Issues](/troubleshooting/cal-com).
+  For comprehensive Cal.com troubleshooting, including detailed solutions and additional issues, see [Cal.com Issues](/troubleshooting/cal-com).
 </Note>
